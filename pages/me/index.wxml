@@ -1,0 +1,69 @@
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class="wrapper">
+  <view class="box">
+    <view class="item top">
+      <view class="login" bindtap="switchToLogin">
+        <view class="login-area">
+          <view class="avatar">
+            <image src="{{avatar}}"></image>
+          </view>
+          <view class="btn">
+            <view class="button">{{nickName}}</view>
+          </view>
+        </view>
+        <view class="code" bindtap="switchToMyCode">
+          <image src="../../img/code.png"></image>
+          <image src="../../img/right-arrow.png"></image>
+        </view>
+      </view>
+      <view class="orderInfo">
+        <view class="myOrder">
+          <view wx:if="{{!isLogin}}" class="desc">--</view>
+          <view wx:else class="desc">{{orderNumbers}}</view>
+          <view>我的下单</view>
+        </view>
+        <view class="count">
+          <view wx:if="{{!isLogin}}" class="desc">--</view>
+          <view wx:else class="desc">{{orderNumbers}}</view>
+          <view>收车数量</view>
+        </view>
+      </view>
+    </view>
+    <view class="item list service">
+      <image src="../../img/erji.png"></image>
+      <view>
+        <button open-type="contact" bindcontact="handleContact" class="text">在线客服</button>
+      </view>
+    </view>
+    <view bindtap="switchToAdvice" class="item list  advFice">
+      <image src="../../img/yijian.png"></image>
+      <view class="text" >意见反馈</view>
+    </view>
+    <view bindtap="makePhoneCall" class="item list  phone">
+      <image src="../../img/dianhua.png"></image>
+      <view class="text" >客服电话</view>
+    </view>
+    <view class="item list  share">
+      <image src="../../img/share.png"></image>
+      <view>
+        <button open-type="share" class="text">激励分享</button>
+      </view>
+    </view>
+    <view wx:if="{{isLogin}}" class="item list exit">
+      <view bindtap="bindExit">退出登录</view>
+    </view>
+
+  </view>
+
+</view>

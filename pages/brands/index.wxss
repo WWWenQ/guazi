@@ -1,0 +1,48 @@
+/* pages/brands/index.wxss */
+page{
+  height: 100%;
+}
+.wrapper{
+  height: 100%;
+}
+.item{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.item .img{
+  flex: 1;
+  margin-right: 30rpx;
+}
+.img image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.item .name{
+  flex: 9;
+  border-bottom: 1rpx solid #eee;
+}
+.name text{
+  line-height: 100rpx;
+  font-size: 28rpx;
+}
+.letter{
+  background: #eee;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+}
+.letters{
+  position: fixed;
+  right: 20rpx;
+  top: 50rpx;
+  color: #07c160;
+  font-size: 26rpx;
+}
+.letters view{
+  margin-bottom: 8rpx;
+}

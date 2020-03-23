@@ -1,0 +1,144 @@
+/* pages/order/index.wxss */
+
+page {
+  background: #eee;
+  height: 100%;
+}
+
+.nav {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.img {
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.img image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.img .txt {
+  font-size: 24rpx;
+}
+
+.nav .navItem {
+  padding: 10rpx;
+}
+
+.nav .is-active {
+  color: #07c160;
+  position: relative;
+}
+
+.nav .is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 4rpx;
+  background: #07c160;
+  left: 20%;
+  bottom: -2rpx;
+  border-radius: 30rpx;
+}
+
+.swiper-box {
+  width: 100%;
+  padding-top: 60rpx;
+  height: 100vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+swiper-item{
+  overflow: scroll;
+}
+swiper-item::-webkit-scrollbar{
+  display: none;
+}
+
+.order-box{
+  width: 95%;
+  height: 380rpx;
+  background: #fff;
+  margin: 20rpx auto;
+  border-radius: 5rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.order-box .top{
+  flex: 2;
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.note{
+  color: #07c160;
+}
+.city{
+  width: 100%;
+  flex: 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cities{
+  flex: 2;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.arriveTime{
+  flex: 1;
+  font-size: 28rpx;
+}
+.city image{
+  width: 60rpx;
+  height: 40rpx;
+  color: #07c160;
+  transform: rotateX(180deg);
+  margin-top: 3rpx;
+}
+.price{
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color:#07c160;
+}
+.status{
+  flex: 2;
+  display: flex;
+  color: #07c160;
+  justify-content: flex-end;
+  align-items: center;
+}
+.status view{
+  font-size: 28rpx;
+  width: 120rpx;
+  height: 40rpx;
+  border: 1rpx solid #07c160;
+  margin-left: 20rpx;
+  text-align: center;
+}

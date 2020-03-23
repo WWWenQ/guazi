@@ -1,0 +1,13 @@
+/* components/addButton.wxss */
+.add{
+  width: 80rpx;
+  height: 80rpx;
+  background: #07c160;
+  border-radius: 50%;
+  box-shadow: 0 0 4rpx 5rpx #07c160;
+  color: #fff;
+  font-size: 60rpx;
+  text-align: center;
+  line-height: 80rpx;
+  position: fixed;
+}

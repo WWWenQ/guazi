@@ -1,0 +1,374 @@
+/* pages/transport/index.wxss */
+
+page {
+  background: #07c160;
+}
+
+.shape {
+  width: 100%;
+  height: 30rpx;
+  background: #fff;
+  border-radius: 50% 50% 0 0;
+  border-style: 50rpx;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+
+.transport-info {
+  width: 100%;
+  background: #fff;
+  height: 400rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 0 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  box-shadow: 0 0 0 2rpx #eee;
+}
+
+.transport-info .item {
+  width: 100%;
+  flex: 1;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.departure-city .title {
+  display: inline-block;
+  width: 130rpx;
+  margin-right: 20rpx;
+}
+
+.departure-city .txt {
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.arrive-city .title {
+  display: inline-block;
+  width: 130rpx;
+  margin-right: 20rpx;
+}
+
+.arrive-city .txt {
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.departure-city .title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 40rpx;
+  position: absolute;
+  border-left: 1px dashed #07c160;
+  left: 65rpx;
+  top: 65rpx;
+}
+
+.transport-info .item:last-child {
+  border: none;
+}
+
+.transport-info .item .title {
+  flex: 2;
+  font-size: 24rpx;
+  color: #07c160;
+  background-color: rgba(7, 193, 96, 0.1);
+  text-align: center;
+  padding: 5rpx 0;
+  margin-right: 20rpx;
+}
+
+.transport-info .item .txt {
+  flex: 8;
+  font-size: 28rpx;
+}
+
+.item.date .title {
+  flex: 2;
+}
+
+.item.date .txt {
+  flex: 3;
+}
+
+.expect-time {
+  flex: 5;
+  font-size: 24rpx;
+  color: #2c2c2c;
+  text-align: right;
+}
+
+.addCarInfo {
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  margin: 20rpx 0;
+  padding: 20rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.addCarInfo .txt {
+  flex: 1;
+}
+
+.addCarInfo .img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.addCarInfo .img text {
+  color: #8a8a8a;
+}
+
+.addCarInfo image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.carInfo {
+  margin-bottom: 0;
+}
+
+.carsInfo {
+  width: auto;
+  min-width: 100%;
+  background: #fff;
+  height: 222rpx;
+  padding: 0 20rpx 0rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.car-item {
+  display: inline-block;
+  width: 180rpx;
+  height: 180rpx;
+  border: 1px solid #eee;
+  margin: 0 20rpx 0 0;
+}
+
+.car-item image {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx auto 10rpx;
+}
+
+.car-item .txt {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.car-item text {
+  font-size: 28rpx;
+}
+
+.write-info {
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.write-info .item.fa {
+  flex: 1;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.write-info .item.shou {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.write-info .item.fa .style,.write-info .item.shou .style {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.write-info .item .icon {
+  flex: 1;
+}
+
+.write-info .item .icon .txt {
+  width: 60rpx;
+  height: 60rpx;
+  background: #000;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  margin-right: 20rpx;
+  font-weight: 550;
+}
+
+.write-info .item text {
+  display: block;
+  margin: 10rpx 0;
+  font-size: 32rpx;
+}
+
+.write-info .item .write-info-fa {
+  flex: 7;
+}
+
+.write-info .style {
+  font-size: 24rpx;
+  color: #07c160;
+  flex: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+}
+.write-info .style text{
+  display: inline-block;
+  padding: 10rpx 20rpx;
+  background: rgba(7, 193, 96, 0.2);
+  text-align: center;
+  line-height: 20rpx;
+}
+
+.write-info .item text:last-child {
+  font-size: 24rpx;
+}
+.write-info .item.shou .icon .txt {
+  background: #07c160;
+}
+
+.invoice {
+  width: 100%;
+  height: 550rpx;
+  background: #fff;
+  padding: 0 20rpx 20rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.invoice-info {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.invoice-info .left {
+  flex: 1;
+}
+
+.invoice-info .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.invoice-info .right image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.invoice-desc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15rpx 0;
+}
+
+.invoice-desc-item .right {
+  padding-right: 10rpx;
+}
+
+.total {
+  font-size: 40rpx;
+  color: #07c160;
+  font-weight: 600;
+}
+
+.reference {
+  font-weight: 550;
+  color: #2c2c2c;
+  font-size: 28rpx;
+}
+
+.total-price {
+  color: #07c160;
+  font-size: 40rpx;
+}
+
+.service-contact {
+  width: 100%;
+  height: 70rpx;
+  background: #fff;
+  padding: 20rpx;
+  margin: 20rpx 0;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.service-contact image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.btn-area {
+  width: 100%;
+  background: #eee;
+  padding: 30rpx 40rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.btn-area .btn {
+  height: 100%;
+  background-color: #07c160;
+  text-align: center;
+  color: #fff;
+  border-radius: 10rpx;
+  line-height: 90rpx;
+}
+
+.btn.btn-left {
+  width: 100rpx;
+  flex: 1;
+  margin-right: 40rpx;
+}
+
+.btn.btn-right {
+  width: 150rpx;
+  flex: 1;
+}

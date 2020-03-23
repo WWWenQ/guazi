@@ -1,0 +1,149 @@
+/* pages/me/index.wxss */
+
+page {
+  height: 100%;
+  background-color: #07c160;
+  padding-top: 20%;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  left: 5%;
+  top: -13%;
+  border-radius: 5rpx;
+  border-top-left-radius: 5rpx;
+  border-top-right-radius: 5rpx;
+}
+
+.item {
+  background-color: #fff;
+  margin-bottom: 25rpx;
+  width: 100%;
+  height: 13%;
+  border-radius: 10rpx;
+}
+
+.item.top {
+  height: 30%;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.top .login {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  border-bottom: 2rpx dashed #eee;
+}
+
+.login-area {
+  flex: 8;
+  overflow: hidden;
+  display: flex;
+}
+
+.avatar {
+  flex: 2.5;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.top .avatar image {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  border-radius: 50%;
+}
+
+.btn {
+  flex: 7.5;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.code {
+  flex: 2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.top .code image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.orderInfo {
+  height: 50%;
+  display: flex;
+  font-size: 24rpx;
+  color: #2c2c2c;
+}
+
+.orderInfo .myOrder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.orderInfo .count {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.orderInfo .desc {
+  font-weight: 600;
+}
+.item.list{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.item image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.item .text{
+  display: inline-block;
+}
+.service button,.share button,.exit button{
+  background: none;
+  font-size: 28rpx;
+  font-weight: normal;
+  text-align: left;
+  padding: 0 0;
+  margin: 0;
+
+}
+.exit{
+  height: 70rpx;
+  text-align: center;
+  justify-content: center;
+}
+.exit button{
+  text-align: center;
+}

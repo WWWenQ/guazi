@@ -1,0 +1,68 @@
+<!--pages/checkFee/index.wxml-->
+
+<view class="wrapper">
+  <view class="top">
+    <view class="desc">
+      <view class="item">
+      <view class="money">{{descInfo.price}}</view>
+      <view class="txt">预计费用(元)</view>
+      </view>
+      
+      <view class="fee item">
+        <view class="singleFee freight">
+          <view>{{descInfo.price}}</view>
+          <view>运车费用</view>
+        </view>
+        <view class="singleFee doorToDoor">
+          <view>0</view>
+          <view>上门提车</view>
+        </view>
+        <view class="singleFee sendBySelf">
+          <view>0</view>
+          <view>送车上门</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="serviceGuarantee">
+    <view class="title">
+      <text class="icon">/ /</text>
+      <text class="txt service-item-title ">服务保障</text>
+      <text class="icon">/ /</text>
+    </view>
+
+    <view class="service-list">
+      <view class="service-item">
+        <view class="service-item-title">放心服务</view>
+        <view class="service-item-desc">
+          <view>10000名客服</view>
+          <view>7*24小时在线</view>
+        </view>
+      </view>
+      <view class="service-item">
+        <view class="service-item-title">放心价格</view>
+        <view class="service-item-desc">
+          <view>价格有保障</view>
+          <view>同行业最低价</view>
+        </view>
+      </view>
+      <view class="service-item">
+        <view class="service-item-title">质量保障</view>
+        <view class="service-item-desc">
+          <view>全程智能监控</view>
+          <view>确保车辆完好</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="note">
+      注：预计费用为系统自动估算费用，实际费用以用户下单为准
+    </view>
+  </view>
+
+  <view class="btn" >
+    <view bindtap="writeTransportInfo">填写运车信息</view>
+  </view>
+</view>

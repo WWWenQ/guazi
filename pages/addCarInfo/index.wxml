@@ -1,0 +1,104 @@
+<!--pages/addCarInfo/index.wxml-->
+<view class="wrapper">
+  <view class="carInfo">
+    <view class="carInfo-item brand" bindtap="switchToBrands">
+      <view class="left">
+        <text>品牌车系</text>
+        <text class="icon">*</text>
+      </view>
+      <view class="arrow">
+        <image src="../../img/right-arrow.png"></image>
+      </view>
+    </view>
+    <view class="carInfo-item price">
+      <view class="left">
+        <text>车辆估值</text>
+        <text class="icon">*</text>
+      </view>
+      <view class="inp">
+        <input bindinput="bindCarValueInput" bindblur="bindCarValueBlur" value="{{carValue}}" type="number" bindfocus="bindIfHasBrand"></input>
+      </view>
+      <view class="arrow">
+        万元/辆
+      </view>
+    </view>
+    <view class="carInfo-item moveable">
+      <view class="left">
+        <text>是否能动</text>
+      </view>
+      <view class="arrow">
+        <switch checked="{{moveAble}}" bindchange="bindIfMoveAble" color="#07c160"></switch>
+      </view>
+    </view>
+  </view>
+
+  <view class="carPlate">
+    <view class="carPlate-item ifHas">
+      <view class="left">
+        <text>是否有车牌</text>
+      </view>
+      <view class="right">
+        <switch checked="{{ifHasPlate}}" color="#07c160" bindchange="bindIfHasPlate"></switch>
+      </view>
+    </view>
+
+     <view wx:if="{{ifHasPlate}}" class="carPlate-item plateNumber">
+      <view class="left">
+        <text>车牌号</text>
+      </view>
+      <view class="right">
+       <input bindblur="bindPlateNumber" value="{{plateNumber}}" placeholder="请输入车牌号"></input>
+      </view>
+    </view>
+
+    <view class="carPlate-item vin">
+      <view class="left">
+        <text>VIN码</text>
+      </view>
+      <view class="right">
+       <input bindblur="bindVinNumber" value="{{vinNumber}}" placeholder="请输入VIN码"></input>
+      </view>
+    </view>
+  </view>
+
+  
+
+  <view class="carInsurance">
+    <view class="carInsurance-item ifAddInsurance">
+      <view class="left">
+        <text>是否追加保险</text>
+      </view>
+      <view class="right">
+        <switch checked="{{ifAddInsurance}}" disabled="{{disabled}}" bindtap="bindIfHasCarValue" color="#07c160" bindchange="bindIfAddInsurance"></switch>
+      </view>
+    </view>
+
+     <view wx:if="{{ifAddInsurance}}" class="carInsurance-item money">
+      <view class="left">
+        <text>追加额度</text>
+      </view>
+      <view class="right">
+       <input value="{{addInsurance}}" bindinput="bindAddInsuranceLimit" bindblur="bindAddInsuranceBlur" value="{{addInsurance}}" ></input>
+       <text>万</text>
+      </view>
+    </view>
+
+    <view wx:if="{{ifAddInsurance}}" class="carInsurance-item fee">
+      <view class="left">
+        <text>保费</text>
+      </view>
+      <view class="right">
+       <text>{{insurance}}</text>
+       <text>元</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="note">
+    注：平台已赠送10w保险，超出部分每10w增加50元保险费用
+  </view>
+
+  <view class="btn" bindtap="bindSave">
+    <view class="button">保存</view>
+  </view>
+</view>

@@ -1,0 +1,103 @@
+/* pages/faCheInfo/index.wxss */
+page{
+  background: #eee;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.faChe-item{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+.faChe-item.self{
+  height: auto;
+  min-height: 80rpx;
+  border-bottom: none;
+}
+.faChe-item .left{
+  flex: 2;
+}
+.faChe-item .middle{
+  flex: 6;
+  text-align: left;
+}
+.faChe-item .right{
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+.faChe-item .right image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.faChe-item.phone .middle{
+  flex: 8;
+}
+.faChe-item .noIcon{
+  flex: 8
+}
+
+.faChe-item.style .left{
+  flex: 2;
+}
+.faChe-item.style .right{
+  flex: 8; 
+}
+.faChe-item.style .right image{
+  vertical-align: middle;
+}
+.faChe-item.style .right text{
+  vertical-align: middle;
+}
+.faChe-item.style picker{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.faChe-item.region .right{
+  display: flex;
+  justify-content: flex-end;
+}
+.faChe-item.region .right image{
+  vertical-align: middle;
+}
+.faChe-item.region .right text{
+  vertical-align: middle;
+}
+
+.note{
+  font-size: 24rpx;
+  color: #8a8a8a;
+  padding: 50rpx 0 50rpx 20rpx ;
+}
+
+.btn{
+  width: 100%;
+  height: 100rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+}
+.btn .button{
+  width: 100%;
+  height: 100%;
+  background: #07c160;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+}

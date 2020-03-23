@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "addButton": "/components/addButton/index"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "地址簿"
+}

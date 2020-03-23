@@ -1,0 +1,12 @@
+<!--pages/advice/index.wxml-->
+<view class="wrapper">
+  <textarea placeholder="请输入您的反馈" placeholder-class="text-area" bindinput="bindTextInputChange" ></textarea>
+  <view class="number">
+   <text>{{count}}</text>
+   <text>/140</text>
+  </view>
+</view>
+
+<view class="btn" >
+    <view bindtap="switchToMe">提交</view>
+  </view>

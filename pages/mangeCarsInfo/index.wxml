@@ -1,0 +1,25 @@
+<!--pages/mangeCarsInfo/index.wxml-->
+<view class="wrapper">
+<block wx:for="{{carsArray}}" wx:key="plateNumber">
+  <view class="item">
+    <view class="img">
+      <image src="../../img/daniu.png"></image>
+    </view>
+
+    <view class="carInfo">
+      <text class="brand">{{item.brandName}}</text>
+      <text>车牌号：{{item.plateNumber}}</text>
+      <text>VIN码:{{item.vinNumber}}</text>
+    </view>
+
+
+  <view class="btns">
+    <view class="edit" data-index="{{index}}" bindtap="bindSwitchToAddCarInfo">编辑</view>
+    <view class="delete" bindtap="bindDeleteCarInfo" data-index="{{index}}">删除</view>
+  </view>
+  </view>
+  </block>
+</view>
+
+<addButton bindtap="bindSwitchToAddCarInfo" windowHeight="{{windowHeight}}" windowWidth="{{windowWidth}}" buttonLeft="{{buttonLeft}}" />
+

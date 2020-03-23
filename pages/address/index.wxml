@@ -1,0 +1,23 @@
+<!--pages/address/index.wxml-->
+<addButton bindtap="bindSwitchTofaCheInfoOrShouCheInfo"  windowHeight="{{windowHeight}}" windowWidth="{{windowWidth}}" buttonLeft="{{buttonLeft}}"></addButton>
+
+<view class="wrapper">
+<block  wx:for="{{addressBookArray}}" wx:key="phoneValue">
+  <view bindtap="switchToFaCheInfoOrShouCheInfoFromConfirm" data-indexFromConfirm="{{index}}" class="item">
+    <view class="img">
+     <text>{{item.firstName}}</text> 
+    </view>
+
+    <view class="carInfo">
+      <text>{{item.nameValue}} {{item.phoneValue}}</text>
+      <text>{{item.region}}{{item.detailAddress}}</text>
+    </view>
+
+
+  <view class="btns">
+    <view class="edit" data-index="{{index}}" bindtap="bindSwitchTofacheInfoOrShouCheInfoFromEdit">编辑</view>
+    <view class="delete" data-index="{{index}}" catchtap="bindDeleteAddress">删除</view>
+  </view>
+  </view>
+  </block>
+</view>

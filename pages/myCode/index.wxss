@@ -1,0 +1,31 @@
+/* pages/myCode/index.wxss */
+page{
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.wrapper{
+  width: 90%;
+  height: 80%;
+  background: #fff;
+  margin-top: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60rpx;
+}
+.top{
+  flex: 2;
+  display: flex;
+}
+.img{
+  margin-right: 20rpx;
+}
+.img image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+}

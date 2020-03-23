@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "填写运车信息",
+  "usingComponents": {
+    "loginButton":"/components/loginButton/index"
+  }
+}

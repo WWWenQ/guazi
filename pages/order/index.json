@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "查订单",
+  "usingComponents": {
+    "loginButton":"/components/loginButton/index"
+  }
+}

@@ -1,0 +1,172 @@
+<!--pages/order/index.wxml-->
+<view class="nav">
+    <view bindtap="changeTitle" data-index="0" class="navItem {{curIndex == 0?'is-active':''}}">待确认（{{readyToConfirmOrder.length}}）</view>
+    <view bindtap="changeTitle" data-index="1" class="navItem {{curIndex == 1?'is-active':''}}">待运输（{{confirmedOrders.length}}）</view>
+    <view bindtap="changeTitle" data-index="2" class="navItem {{curIndex == 2?'is-active':''}}">待收车（{{readyToReceivedOrders.length}}）</view>
+    <view bindtap="changeTitle" data-index="3" class="navItem {{curIndex == 3?'is-active':''}}">全部订单（{{allOfOrders.length}}）</view>
+  </view>
+
+
+<!-- 如果没有登录 -->
+<loginButton wx:if="{{!isLogin}}" text="点击登录获取订单信息"/>
+
+
+<swiper wx:else current="{{curIndex}}" class="swiper-box" duration="300" bindchange="bindChange">
+<!-- 待确认的订单 -->
+  <swiper-item>
+    <view>
+      <view wx:if="{{readyToConfirmOrder.length===0}}" class="img">
+        <image src="../../img/no-order-info.png"></image>
+        <view class="txt">暂无订单信息</view>
+      </view>
+      <block wx:for="{{readyToConfirmOrder}}">
+      <view wx:if="{{readyToConfirmOrder.length!==0}}"  class="order-box">
+        <view class="top">
+          <view class="order-number">订单号：{{item.orderNumber}}</view>
+          <view class="note">待下单</view>
+        </view>
+
+
+        <view class="city">
+          <text>{{item.cityInfo.fromCityArray[1]}}</text>
+          <view>
+            <image src="../../img/lvjiantou.png"></image>
+          </view>
+          <text>{{item.cityInfo.toCityArray[1]}}</text>
+        </view>
+
+        <view class="price">
+          <text>￥{{item.cityInfo.price}}</text>
+        </view>
+
+        <view class="status">
+          <view data-index="{{index}}" bindtap="bindConfirmOrder">确认下单</view>
+          <view bindtap="bindReviseOrder" data-index="{{index}}">修改下单</view>
+          <view bindtap="bindCancelSavedOrder" data-index="{{index}}">取消下单</view>
+        </view>
+
+
+      </view>
+      </block>
+    </view>
+  </swiper-item>
+  <!-- 待运输的订单 -->
+  <swiper-item>
+     <view wx:if="{{confirmedOrders.length===0}}" class="img">
+        <image src="../../img/no-order-info.png"></image>
+        <view class="txt">暂无订单信息</view>
+      </view>
+<block wx:for="{{confirmedOrders}}">
+      <view wx:if="{{confirmedOrders.length!==0}}"  class="order-box">
+        <view class="top">
+          <view class="order-number">订单号：{{item.orderNumber}}</view>
+          <view class="note">待运输</view>
+        </view>
+
+
+        <view class="city">
+        <view class="cities">
+          <text>{{item.cityInfo.fromCityArray[1]}}</text>
+          <view>
+            <image src="../../img/lvjiantou.png"></image>
+          </view>
+          <text>{{item.cityInfo.toCityArray[1]}}</text>
+          </view>
+          <view class="arriveTime">
+          <text>预计到达时间：</text>
+          <text>{{item.dateInfo.arriveDate}}</text>
+          </view>
+        </view>
+
+        <view class="price">
+          <text>￥{{item.cityInfo.price}}</text>
+        </view>
+
+        <view class="status">
+        <view>修改下单</view>
+          <view bindtap="bindCancelOrder" data-index="{{index}}">取消下单</view>
+          
+        </view>
+
+
+      </view>
+      </block>
+
+  </swiper-item>
+
+<!-- 待收车订单 -->
+  <swiper-item>
+       <view wx:if="{{readyToReceivedOrders.length===0}}" class="img">
+        <image src="../../img/no-order-info.png"></image>
+        <view class="txt">暂无订单信息</view>
+      </view>
+<block wx:for="{{readyToReceivedOrders}}">
+      <view wx:if="{{readyToReceivedOrders.length!==0}}"  class="order-box">
+        <view class="top">
+          <view class="order-number">订单号：{{item.orderNumber}}</view>
+          <view class="note">待收车</view>
+        </view>
+
+
+        <view class="city">
+          <text>{{item.cityInfo.fromCityArray[1]}}</text>
+          <view>
+            <image src="../../img/lvjiantou.png"></image>
+          </view>
+          <text>{{item.cityInfo.toCityArray[1]}}</text>
+        </view>
+
+        <view class="price">
+          <text>￥{{item.cityInfo.price}}</text>
+        </view>
+
+        <view class="status">
+          <text>预计到达时间：</text>
+          <text>{{item.dateInfo.arriveDate}}</text>
+        </view>
+
+
+      </view>
+      </block>
+  </swiper-item>
+
+
+
+
+
+  <!-- 全部订单 -->
+  <swiper-item>
+    <view wx:if="{{allOfOrders.length===0}}" class="img">
+        <image src="../../img/no-order-info.png"></image>
+        <view class="txt">暂无订单信息</view>
+      </view>
+<block wx:for="{{allOfOrders}}">
+      <view wx:if="{{allOfOrders.length!==0}}"  class="order-box">
+        <view class="top">
+          <view class="order-number">订单号：{{item.orderNumber}}</view>
+          <view class="note">{{item.status}}</view>
+        </view>
+
+
+        <view class="city">
+          <text>{{item.cityInfo.fromCityArray[1]}}</text>
+          <view>
+            <image src="../../img/lvjiantou.png"></image>
+          </view>
+          <text>{{item.cityInfo.toCityArray[1]}}</text>
+        </view>
+
+        <view class="price">
+          <text>￥{{item.cityInfo.price}}</text>
+        </view>
+
+        <view class="status">
+          <text>预计到达时间：</text>
+          <text>{{item.dateInfo.arriveDate}}</text>
+        </view>
+
+
+      </view>
+      </block>
+  </swiper-item>
+</swiper>

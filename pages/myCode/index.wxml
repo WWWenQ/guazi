@@ -1,0 +1,15 @@
+<!--pages/myCode/index.wxml-->
+
+<view class="wrapper">
+<view class="top">
+  <view class="img">
+    <image src="{{avatar}}"></image>
+  </view>
+  <view class="name">
+    <text>{{nickName}}</text>
+  </view>
+  </view>
+  <view class="code">
+    <image></image>
+  </view>
+</view>

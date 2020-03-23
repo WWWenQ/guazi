@@ -1,0 +1,110 @@
+/* pages/addCarInfo/index.wxss */
+page{
+  background: #eee;
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+.carInfo{
+  width: 100%;
+  height: 240rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.carInfo-item{
+  flex: 1;
+  border-bottom: 1rpx solid #eee;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.carInfo-item .arrow image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.carInfo-item .icon{
+  color: red;
+  font-size: 38rpx;
+  vertical-align: middle;
+}
+
+.carInfo-item.price .left{
+  flex: 2
+}
+.carInfo-item.price .arrow{
+  text-align: right;
+  flex: 1.5
+}
+.carInfo-item.price .inp{
+  flex: 6.5
+}
+.carInfo-item.price .inp input{
+  text-align: right;
+}
+switch{
+  zoom:0.7
+}
+
+
+.carPlate,.carInsurance{
+  width: 100%;
+  background: #fff;
+  margin: 20rpx 0;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carPlate-item,.carInsurance-item{
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+}
+.carPlate-item .right input,.carInsurance-item .right input{
+  text-align: right;
+}
+.money .right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.money .right input{
+  margin-right: 5rpx;
+}
+
+.note{
+  font-size: 24rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #8a8a8a;
+}
+
+.btn{
+  width: 100%;
+  height: 100rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+}
+.btn .button{
+  width: 100%;
+  height: 100%;
+  background: #07c160;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+}

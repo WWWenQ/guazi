@@ -1,0 +1,51 @@
+<view class="wrapper">
+  <view class="top-banner">
+    <view class="img">
+      <text>瓜子</text>
+      <image src="../../img/banner.png"></image>
+    </view>
+    <view class="check">
+      <view class="cities">
+        <picker class="departure-city" data-mark="d" bindtap="changeMark" bindchange="bindRegionChange" mode="region" value="{{regionD}}">
+          <view class="title">出发城市</view>
+          <view class="city-name">{{regionD[1]}}</view>
+          <view class="district">{{regionD[2]}}</view>
+        </picker>
+        <view class="switch-button" bindtap="reverseCity">
+          <image src="../../img/switch.png"></image>
+        </view>
+        <picker class="arrive-city" data-mark="a" bindtap="changeMark" bindchange="bindRegionChange" mode="region" value="{{regionA}}">
+          <view class="title">到达城市</view>
+          <view class="city-name">{{regionA[1]}}</view>
+          <view class="district">{{regionA[2]}}</view>
+        </picker>
+      </view>
+      <view class="btn">
+        <button bindtap="switchToCheckFee">查询</button>
+      </view>
+    </view>
+  </view>
+  <view class="hot-lines">
+    <view class="title">热门线路推荐</view>
+    <view class="line-list">
+
+      <block wx:for="{{hotLines}}" wx:key="*this">
+        <view class="line-item" data-index="{{index}}" bindtap="checkHotLine">
+          <view class="round1"></view>
+          <view class="round2"></view>
+          <view class="left">
+            <view class="line-name">
+              <view>{{item.fromName}}</view>
+              <image src="../../img/danjiantou-right.png"></image>
+              <view>{{item.toName}}</view>
+            </view>
+            <view class="line-note">{{item.promotion}}</view>
+          </view>
+          <view class="right">￥{{item.price}}</view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+
+</view>

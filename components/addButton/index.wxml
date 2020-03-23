@@ -1,0 +1,6 @@
+<!--components/addButton.wxml-->
+<view  bindtouchmove="buttonMove" bindtouchstart="buttonStart" bindtouchend="buttonEnd" class="add" style="top:{{buttonTop}}px;left:{{buttonLeft}}px">+</view>
+
+
+
+<!-- bindtap="bindSwitchToAddCarInfo" -->

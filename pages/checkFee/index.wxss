@@ -1,0 +1,120 @@
+/* pages/checkFee/index.wxss */
+.wrapper{
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+.top{
+  width: 100%;
+  height: 380rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.top .desc{
+  width: 100%;
+  height: 100%;
+  background: #07c160;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 24rpx;
+}
+.desc .item{
+  padding-top: 20rpx;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.desc .money{
+  font-size: 60rpx;
+  font-weight: 550;
+  margin: 15rpx 0 10rpx;
+}
+.desc .fee{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.singleFee view:first-child{
+  margin-bottom: 15rpx;
+}
+.serviceGuarantee{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.serviceGuarantee .title{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  margin: 15rpx 0;
+}
+.serviceGuarantee .title .icon{
+  color: #07c160;
+  margin: 0 30rpx;
+  font-size: 28rpx;
+  position: relative;
+}
+.serviceGuarantee .title .icon:first-child::after{
+  content:"";
+  display: block;
+  width: 28rpx;
+  height: 28rpx;
+  background: rgba(7, 193, 96, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8rpx;
+  left: 10rpx;
+}
+.service-item-title{
+  font-size: 26rpx;
+  font-weight: 550;
+  margin-bottom: 15rpx;
+}
+.service-list .service-item{
+  width: 100%;
+  height: 150rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-item-desc{
+  font-size: 24rpx;
+  color: #8a8a8a;
+  display: flex;
+  justify-content: space-between;
+}
+
+.note{
+  font-size: 24rpx;
+  color: #8a8a8a;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  line-height: 40rpx;
+}
+
+.btn{
+  width: 100%;
+  height: 150rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.btn view{
+  background: #07c160;
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  border-radius: 10rpx;
+  line-height: 70rpx;
+  font-size: 24rpx;
+}

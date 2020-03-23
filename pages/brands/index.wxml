@@ -1,0 +1,32 @@
+<!--pages/brands/index.wxml-->
+
+
+<scroll-view class="wrapper" scroll-y="true" scroll-with-animation="true" scroll-into-view="{{curLetter}}">
+  <block wx:for="{{brandLists}}">
+<view  class="item-letter" id="{{item.letter}}">
+      <!-- 字母 -->
+      <view class="letter">{{item.letter}}</view>
+      <!-- 按字母分类的品牌 -->
+      <block wx:for="{{item.brands}}" wx:for-item="brand">
+        <view class="item-brands" bindtap="bindChooseCar" data-brandID="{{brand.id}}" data-brandName="{{brand.name}}">
+          <view class="item">
+            <view class="img">
+              <image src="{{brand.img}}"></image>
+            </view>
+            <view class="name">
+              <text>{{brand.name}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    </block>
+  
+
+
+<view class="letters">
+<block wx:for="{{brandLists}}">
+  <view data-letter="{{item.letter}}" catchtap="scrollTo" >{{item.letter}}</view>
+</block>
+</view>
+</scroll-view>

@@ -1,0 +1,15 @@
+<!--pages/login/index.wxml-->
+<view class="wrapper">
+  <view class="img">
+    <image src="../../img/logo.jpg"></image>
+  </view>
+  <view class="btn">
+    <button class="button" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+      微信账号快捷登录
+    </button>
+  </view>
+
+  <view class="note">
+    输入手机号码登录/注册
+  </view>
+</view>

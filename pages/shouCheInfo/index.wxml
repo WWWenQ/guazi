@@ -1,0 +1,55 @@
+<!--pages/faCheInfo/index.wxml-->
+<view class="wrapper">
+  <view class="faChe-item name">
+    <view class="left">收车人</view>
+    <view class="middle {{isFromAddButton?'noIcon':''}}" >
+      <input placeholder="请填写姓名" value="{{nameValue}}" bindinput="bindNameValue"></input>
+    </view>
+    <view wx:if="{{!isFromAddButton&&!isFromEdit}}" class="right" bindtap="bindSwitchToAddress">
+      <image src="../../img/address.png"></image>
+    </view>
+  </view>
+
+  <view class="faChe-item phone">
+    <view class="left">手机号码</view>
+    <view class="middle">
+      <input placeholder="请填写手机号码" value="{{phoneValue}}" bindblur="bindPhoneValue"></input>
+    </view>
+  </view>
+
+  <view wx:if="{{!isFromAddButton&&!isFromEdit}}" class="faChe-item style">
+    <view class="left">收车方式</view>
+    <view class="right">
+    <picker mode="selector" value="{{styleIndex}}" range="{{styleArray}}" bindchange="bindStyleChange">
+      <text>{{styleArray[styleIndex]}}</text>
+      <image src="../../img/right-arrow.png"></image>
+    </picker>
+    </view>
+  </view>
+
+  <view wx:if="{{!doItBySelf}}" class="faChe-item region">
+    <view  class="left">所在地区</view>
+    <view class="right">
+    <picker mode="region" value="{{region}}" bindchange="bindRegionChange">
+      <text>{{region[0]+region[1]+region[2]}}</text>
+      <image src="../../img/right-arrow.png"></image>
+    </picker>
+    </view>
+  </view>
+
+    <!-- 自提 -->
+  <view wx:else class="faChe-item self">
+    <view class="left">自提地址</view>
+    <view class="middle">
+      北京市朝阳区将台路15号楼898创新空间停车场院内
+    </view>
+  </view>
+
+  <view wx:if="{{!doItBySelf}}" class="note">
+    <input bindinput="bindBlurDetailAddress" value="{{detailAddress}}" placeholder="详细地址：如道路、门牌号、小区、楼栋、单元"></input>
+  </view>
+</view>
+
+<view class="btn" bindtap="switchToAddCarInfo">
+  <view class="button">保存</view>
+</view>

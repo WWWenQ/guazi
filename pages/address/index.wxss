@@ -1,0 +1,101 @@
+/* pages/address/index.wxss */
+/* pages/mangeCarsInfo/index.wxss */
+page{
+  background: #eee;
+}
+.wrapper{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.item{
+  width: 100%;
+  height: 220rpx;
+  border-top: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  background: #fff;
+  box-sizing: border-box;
+}
+.item:first-child{
+  margin-top: 20rpx;
+  border-top: none;
+}
+.item .img{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.img text{
+  width: 60rpx;
+  height: 60rpx;
+  background: #000;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+
+.item .carInfo{
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.carInfo text{
+  font-size: 26rpx;
+  color: #8a8a8a;
+  line-height: 1.5rem;
+}
+.carInfo text.brand{
+  font-size: 32rpx;
+  font-weight: 530;
+  color: #000;
+}
+
+.item .btns{
+  flex: 3;
+  font-size: 26rpx;
+  color: #bfbfbf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btns .edit{
+  padding-right: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.btns .edit::after{
+  content:'';
+  display:inline-block;
+  width: 4rpx;
+  height: 25rpx;
+  background: #bfbfbf;
+  position: absolute;
+  right: -2rpx;
+  top: 8rpx;
+
+}
+.btns .delete{
+  padding-left: 20rpx;
+}
+
+.add{
+  width: 80rpx;
+  height: 80rpx;
+  background: #07c160;
+  border-radius: 50%;
+  box-shadow: 0 0 4rpx 5rpx #07c160;
+  color: #fff;
+  font-size: 60rpx;
+  text-align: center;
+  line-height: 80rpx;
+  position: fixed;
+}

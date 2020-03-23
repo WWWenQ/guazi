@@ -1,0 +1,165 @@
+<!--pages/transport/index.wxml-->
+<view class="shape"></view>
+<view class="wrapper">
+
+  <view class="transport-info">
+    <view class="content">
+      <picker class="item" mode="region" bindchange="bindRegionChange" value="{{regionD}}" custom-item="{{customItem}}">
+        <view class="departure-city">
+          <view class="title">出发城市</view>
+          <view data-mark="d" bindtap="changeMark" class="txt">{{regionD[0]+regionD[1]+regionD[2]}}</view>
+        </view>
+      </picker>
+      <picker class="item" mode="region" bindchange="bindRegionChange" value="{{regionA}}" custom-item="{{customItem}}">
+        <view class="arrive-city">
+          <view class="title">到达城市</view>
+          <view class="txt" data-mark="a" bindtap="changeMark">{{regionA[0]+regionA[1]+regionA[2]}}</view>
+        </view>
+      </picker>
+      <view class="item arrive-city">
+        <view class="title">预估里程</view>
+        <view class="txt">1000公里</view>
+      </view>
+      <view class="item date">
+        <view class="title">发车日期</view>
+        <picker class="txt" mode="date" value="{{departureDate}}" start="{{nowDate}}" end="{{latestDate}}" bindchange="bindDateChange">
+          <view class="txt picker">{{departureDate}}</view>
+        </picker>
+        <view class="expect-time">预计到达：{{arriveDate}}</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view wx:if="{{carsArray.length===0}}" class="addCarInfo" bindtap="switchToAddCarInfo">
+    <view class="txt">添加托运车辆信息</view>
+    <view class="img">
+      <image src="../../img/right-arrow.png"></image>
+    </view>
+  </view>
+
+  <view wx:else class="addCarInfo carInfo" bindtap="switchToAddCarInfo">
+    <view class="txt">托运车辆信息</view>
+    <view class="img" bindtap="switchToMangeCarsInfo">
+      <text>共{{carsArray.length}}辆</text>
+      <image src="../../img/right-arrow.png"></image>
+    </view>
+  </view>
+
+  <scroll-view wx:if="{{carsArray.length>0}}" scroll-x="true" class="carsInfo" bindtap="switchToMangeCarsInfo">
+    <block wx:for="{{carsArray}}" wx:key="*this">
+      <view class="car-item">
+        <image class="logo" src="../../img/daniu.png"></image>
+        <view class="txt">
+          <text>大牛</text>
+        </view>
+
+      </view>
+    </block>
+  </scroll-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <view class="write-info">
+    <view class="item fa" bindtap="switchToFaCheInfo">
+      <view class="icon">
+        <view class="txt">发</view>
+      </view>
+      <view wx:if="{{!faCheInfo}}" class="write-info-fa">
+        <text>发车信息</text>
+        <text>点击填写发车信息</text>
+      </view>
+
+       <view wx:else class="write-info-fa">
+        <text>{{faCheInfo.nameValue}}  {{faCheInfo.phoneValue}}</text>
+        <text>{{faCheInfo.region}}{{faCheInfo.detailAddress}}</text>
+      </view>
+
+      <view wx:if="{{faCheInfo.style}}" class="style">
+      <text>{{faCheInfo.style}}</text>
+      </view>
+
+    </view>
+    <view class="shou item" bindtap="switchToShouCheInfo">
+      <view class="icon">
+        <view class="txt">收</view>
+      </view>
+      <view wx:if="{{!shouCheInfo}}" class="write-info-fa">
+        <text>收车信息</text>
+        <text>点击填写收车信息</text>
+      </view>
+
+      <view wx:else class="write-info-fa">
+        <text>{{shouCheInfo.nameValue}}  {{shouCheInfo.phoneValue}}</text>
+        <text>{{shouCheInfo.region}}{{shouCheInfo.detailAddress}}</text>
+      </view>
+
+      <view wx:if="{{shouCheInfo.style}}" class="style">
+      <text>{{shouCheInfo.style}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="invoice">
+    <view class="invoice-info">
+      <view class="left">发票信息</view>
+      <picker mode="selector" value="{{invoiceIndex}}" range="{{invoiceArray}}" bindchange="bindInvoiceChange">
+        <view class="right">
+          <text>{{invoiceArray[invoiceIndex]}}</text>
+          <image src="../../img/right-arrow.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="invoice-desc">
+      <view class="invoice-desc-item">
+        <text class="left">上门提车</text>
+        <text class="right">￥0</text>
+      </view>
+      <view class="invoice-desc-item">
+        <text class="left">送车上门</text>
+        <text class="right">￥0</text>
+      </view>
+      <view class="invoice-desc-item">
+        <text class="left">物流费</text>
+        <text class="right">￥{{price}}</text>
+      </view>
+      <view class="invoice-desc-item">
+        <text class="left">税费</text>
+        <text class="right">￥{{tax}}</text>
+      </view>
+      <view class="invoice-desc-item">
+        <text class="left">保险费</text>
+        <text class="right">￥0</text>
+      </view>
+      <view class="invoice-desc-item">
+        <view class="left">
+          <text class="total">总计</text>
+          <text class="reference">(参考价)</text>
+        </view>
+        <text class="right total-price">￥{{price+tax}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="service-contact">
+    <text>专属物流顾问：龙腾 13032218888</text>
+    <view bindtap="bindCall">
+      <image src="../../img/service-contact-phone.png"></image>
+    </view>
+  </view>
+
+  <view class="btn-area">
+    <view class="btn btn-left" bindtap="bindSaveOrder">保存订单</view>
+    <view class="btn btn-right" bindtap="bindConfirmOrder">确认下单</view>
+  </view>
+</view>

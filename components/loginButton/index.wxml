@@ -1,0 +1,8 @@
+<!--components/loginButton/index.wxml-->
+<view class="wrapper">
+<view class="img">
+  <image src="../../img/no-order-info.png"></image>
+  <view class="txt">{{text}}</view>
+</view>
+<view class="btn" bindtap="switchToLogin">登录</view>
+</view>

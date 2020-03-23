@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/freight/index",
+    "pages/transport/index",
+    "pages/order/index",
+    "pages/me/index",
+    "pages/checkFee/index",
+    "pages/addCarInfo/index",
+    "pages/brands/index",
+    "pages/faCheInfo/index",
+    "pages/shouCheInfo/index",
+    "pages/normalInvoice/index",
+    "pages/vatInvoice/index",
+    "pages/login/index",
+    "pages/advice/index",
+    "pages/mangeCarsInfo/index",
+    "pages/address/index",
+    "pages/revisedTransportInfo/index",
+    "pages/myCode/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#07c160",
+    "navigationBarTitleText": "瓜子物流",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#959394",
+    "selectedColor": "#07c160",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/freight/index",
+        "iconPath": "img/freight.png",
+        "selectedIconPath": "img/freight-selected.png",
+        "text": "运价"
+      },
+      {
+        "pagePath": "pages/transport/index",
+        "iconPath": "img/transport.png",
+        "selectedIconPath": "img/transport-selected.png",
+        "text": "运车"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "iconPath": "img/order.png",
+        "selectedIconPath": "img/order-selected.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "iconPath": "img/me.png",
+        "selectedIconPath": "img/me-selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

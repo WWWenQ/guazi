@@ -1,0 +1,42 @@
+/* pages/advice/index.wxss */
+.wrapper{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+textarea{
+  width: 100%;
+  border: 1rpx solid #eee;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.text-area{
+  font-size: 30rpx;
+}
+.number{
+  position: absolute;
+  bottom: 40rpx;
+  right: 40rpx;
+  font-size: 28rpx;
+}
+.number text:first-child{
+  color: #07c160;
+}
+
+.btn{
+  width: 100%;
+  height: 150rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.btn view{
+  background: #07c160;
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  border-radius: 10rpx;
+  line-height: 70rpx;
+  font-size: 24rpx;
+}
